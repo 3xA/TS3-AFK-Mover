@@ -72,8 +72,8 @@ if 'error id=0' in clientBlob:
 					elif xAway == '1':
 						print(str(xNick + ' has gone away, moving to AFK'))
 						child.sendline('clientmove clid=' + str(xClid) + ' cid=' + str(AFKCHANNEL))
-					else:
-						print(str(xNick + ' idle for ' + str(xITime) + ' ms. Not Moving..'))
+					#else:
+						#print(str(xNick + ' idle for ' + str(xITime) + ' ms. Not Moving..'))
 				#else:
 					#print('DEBUG: xITime.isdigit = false')
 		#else:
