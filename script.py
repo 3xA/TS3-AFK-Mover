@@ -66,21 +66,8 @@ if 'error id=0' in clientBlob:
 			if str(xChan) not in CHANBLACKLIST:
 				if xITime.isdigit():
 					if int(xITime) >= IDLETIMELIMIT:
-						print(str(xNick + ' is idle, moving to AFK'))
 						if xClid.isdigit():
 							child.sendline('clientmove clid=' + str(xClid) + ' cid=' + str(AFKCHANNEL))
-					elif xAway == '1':
-						print(str(xNick + ' has gone away, moving to AFK'))
-						child.sendline('clientmove clid=' + str(xClid) + ' cid=' + str(AFKCHANNEL))
-					#else:
-						#print(str(xNick + ' idle for ' + str(xITime) + ' ms. Not Moving..'))
-				#else:
-					#print('DEBUG: xITime.isdigit = false')
-		#else:
-			#print('DEBUG: xChan.isdigit = false n=' + str(n) + ' xClid=' + xClid)
 	child.sendline('logout')
 	child.expect('msg=ok')
 	child.sendline('quit')
-else:
-	print('DEBUG: error id=0 NOT in clientBlob')
-	print(clientBlob)
