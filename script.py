@@ -13,7 +13,7 @@ USERNAME = 'serveradmin'
 PASSWORD = '123superpassword456'
 SERVERID = '1' #1 by default
 DISPLAYNAME = 'AFK Bot' #Shown in chat to all users
-IDLETIMELIMIT = 240 #Minutes
+IDLETIMELIMIT = 360 #Minutes
 AFKCHANNEL = 18 #Channel to move client after IDLETIMELIMIT
 CHANBLACKLIST = "['18','19','20']" #Channels not to watch
 # ----
